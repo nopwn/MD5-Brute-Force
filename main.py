@@ -14,9 +14,7 @@ args = parser.parse_args()
 MAX_RANGE = 25
 
 def convertToMD5(word):
-    hsh = word 
-    hsh = hashlib.md5(hsh.encode())
-    return hsh.hexdigest()
+    return hashlib.md5(word.encode()).hexdigest()
 
 def crack_hash(CHAR_SET, hsh, maxrange):
     for i in range(maxrange+1):
